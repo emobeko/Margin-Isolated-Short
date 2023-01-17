@@ -1,0 +1,10 @@
+{
+  "ticker": "{{ticker}}",
+  "exchange": "{{exchange}}",
+  "price": "{{strategy.order.price}}",
+  "side": "{{strategy.order.comment}}",
+  "quantity": "{{quantity}}",
+  "binanceApiKey": "{{binanceApiKey}}",
+  "binanceSecretKey": "{{binanceSecretKey}}"
+
+}

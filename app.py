@@ -19,6 +19,7 @@ def webhook():
         binanceApiKey = data['binanceApiKey']
         binanceSecretKey = data['binanceSecretKey']
 
+        
         params = {
             "symbol": ticker,
             "side": side,
@@ -27,6 +28,7 @@ def webhook():
             "isIsolated": "TRUE",
             "sideEffectType": "MARGIN_BUY",
         }
+        
         params2 = {
             "symbol": ticker,
             "side": side,
@@ -37,12 +39,9 @@ def webhook():
         }
 
         if side == "BUY":
-            Client(binanceApiKey, binanceSecretKey).new_margin_order(**params)
-        if side == "SELL":
             Client(binanceApiKey, binanceSecretKey).new_margin_order(**params2)
-
-
-
+        if side == "SELL":
+            Client(binanceApiKey, binanceSecretKey).new_margin_order(**params)
 
     except:
         pass
